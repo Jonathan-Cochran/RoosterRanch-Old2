@@ -1,0 +1,23 @@
+import React, { Component } from 'react';
+import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
+
+
+const Markers = props => (
+  myMarkers.map(marker =>
+    <Marker 
+      {...props}
+      key={marker.id} 
+      title={marker.name}
+     />
+  )
+);
+
+class Resume extends Component {
+	render() {
+		return(
+
+		)
+	}
+}
+
+export default Markers;
