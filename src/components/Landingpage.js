@@ -14,10 +14,10 @@ class Landing extends Component {
 						/>
 
 						<div className="banner-text">
-							<h1>I LOVE BUILDING</h1>
+							<h1>A PASSION FOR DEVELOPING</h1>
 							<hr/>
 							<p>
-								Technology | Teams | Ideas | Passion | 3d Prints
+								Technology | Teams | Ideas | 3d Prints
 							</p>
 							<div className="social-links">
 

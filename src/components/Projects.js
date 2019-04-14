@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from 'react-mdl';
+import { Link } from 'react-router-dom';
 
 class Project extends Component {
 	constructor(props) {
@@ -18,9 +19,24 @@ class Project extends Component {
 			  	This is my first attempt at a React Website. I decided to make something that I have always wanted to have and soemthing functional... A personal portfolio site.
 			  </CardText>
 			  <CardActions border>
+			  	<a href="https://github.com/Jonathan-Cochran/RoosterRanch" rel="noopener noreferrer" target="_blank"><Button colored>GitHub</Button></a>
+			  	<a href="http://www.roosterran.ch" rel="noopener noreferrer" target="_blank"><Button colored>LiveDemo</Button></a>
+			  </CardActions>
+			  <CardMenu style={{color: '#fff'}}>
+			    <IconButton name="share" />
+			  </CardMenu>
+			</Card>
+
+			{/* React Web Profile Project  */}
+			<Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
+			  <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://cdn-images-1.medium.com/max/1200/1*y6C4nSvy2Woe0m7bWEn4BA.png) center / cover'}} >Google Maps App</CardTitle>
+			  <CardText>
+			  	A react app integrated with Google Maps.
+			  </CardText>
+			  <CardActions border>
 			  	<Button colored>GitHub</Button>
 			  	<Button colored>CodePen</Button>
-			  	<Button colored>LiveDemo</Button>
+			  	<Link to="/GMap"><Button colored>LiveDemo</Button></Link>
 			  </CardActions>
 			  <CardMenu style={{color: '#fff'}}>
 			    <IconButton name="share" />
