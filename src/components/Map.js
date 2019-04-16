@@ -1,4 +1,3 @@
-/* global google */
 import React, { Component } from "react";
 import { Map, Marker, InfoWindow, GoogleApiWrapper } from "google-maps-react";
 
@@ -11,11 +10,11 @@ export class MapContainer extends Component {
     return (
       <div className="map-container">
         <Map
-          google={this.props.google}
+          google={google}
           className={"map"}
           style={this.props.style}
           zoom={this.props.zoom}
-          initialCenter={this.props.center}
+          initialCenter={center}
         >
           {data.map(item => (
             <Marker
@@ -33,8 +32,8 @@ export class MapContainer extends Component {
               lng: this.props.selectedItem.lng
             }}
           >
-            <div>
-              <h1>{this.props.selectedItem.title}</h1>
+            <div className="map-info-window">
+              {this.props.selectedItem.name}
             </div>
           </InfoWindow>
         </Map>

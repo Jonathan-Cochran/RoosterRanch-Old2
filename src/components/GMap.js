@@ -3,24 +3,31 @@ import MapContainer from "./Map";
 import { Grid, Cell } from 'react-mdl';
 
 const mapStyles = {
-  width: '80%',
+  width: '100%',
   height: '100%'
 };
 
 const data = [
   {
-    id: 1,
     name : "Root",
     lat : 39.958065,
     lng : -82.997717,
-    addr : "123 Main St." 
+    addr : "80 E Rich St Suite 500, Columbus, OH 43215",
+    id: 1
   },
   {
-    id: 2,
-    name : "Test",
-    lat : 39.95,
-    lng : -82.99,
-    addr : "456 Main St." 
+    name : "Condado",
+    lat : 39.959421,
+    lng : -82.999859,
+    addr : "132 S High St, Columbus, OH 43215",
+    id: 1
+  },
+  {
+    name : "Winans",
+    lat : 39.957719,
+    lng : -82.999499,
+    addr : "216 S High St, Columbus, OH 43215",
+    id: 2
   }
 ];
 
@@ -28,10 +35,10 @@ const LocationList = props => {
   return (
     <div>
       <ul>
-        {props.items.map((item, index) => {
+        {props.items.map((item) => {
           return (
-            <li key={index} onClick={e => props.onClick(e, item)}>
-              {item.name}
+            <li key={item.id} onClick={e => props.onClick(e, item)}>
+              {item.name} - {item.addr}
             </li>
           );
         })}
@@ -52,19 +59,19 @@ export class gMap extends Component {
 
   render() {
     return (
-      <div>
+      <div className="google-map-div">
         <Grid>
           <Cell col={10}>
+          <LocationList items={data} onClick={this.showInfo.bind(this)} />
           <MapContainer
             center={{ lat: 39.958065, lng: -82.997717 }}
-            zoom={14}
+            zoom={16}
             style={mapStyles}
             data={data}
             selectedItem={this.state.selectedItem}
           />
           </Cell>
           <Cell col={2}>
-            <LocationList items={data} onClick={this.showInfo.bind(this)} />
           </Cell>
         </Grid>
       </div>

@@ -119,3 +119,8 @@
   color: white;
   padding: 2em;
 }
+
+/* GMap page */
+.google-map-div li {
+  cursor: pointer;
+}
