@@ -1,77 +1,75 @@
 import React, { Component } from 'react';
-import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
+import MapContainer from "./Map";
+import { Grid, Cell } from 'react-mdl';
 
 const mapStyles = {
-  width: '75%',
+  width: '80%',
   height: '100%'
 };
 
-export class MapContainer extends Component {
-  state = {
-    showingInfoWindow: false,  //Hides or the shows the infoWindow
-    activeMarker: {},          //Shows the active marker upon click
-    selectedPlace: {}          //Shows the infoWindow to the selected place upon a marker
-  };
-  onMarkerClick = (props, marker, e) =>
-    this.setState({
-      selectedPlace: props,
-      activeMarker: marker,
-      showingInfoWindow: true
-    });
+const data = [
+  {
+    id: 1,
+    name : "Root",
+    lat : 39.958065,
+    lng : -82.997717,
+    addr : "123 Main St." 
+  },
+  {
+    id: 2,
+    name : "Test",
+    lat : 39.95,
+    lng : -82.99,
+    addr : "456 Main St." 
+  }
+];
 
-  onClose = props => {
-    if (this.state.showingInfoWindow) {
-      this.setState({
-        showingInfoWindow: false,
-        activeMarker: null
-      });
-    }
+const LocationList = props => {
+  return (
+    <div>
+      <ul>
+        {props.items.map((item, index) => {
+          return (
+            <li key={index} onClick={e => props.onClick(e, item)}>
+              {item.name}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
+
+export class gMap extends Component {
+  state = {
+    selectedItem: { lat: 0, lng: 0 }
   };
+
+  showInfo(e, selectedItem) {
+    this.setState({ selectedItem: selectedItem });
+    console.log(selectedItem);
+  }
+
   render() {
     return (
-      <Map
-        google={this.props.google}
-        zoom={14}
-        style={mapStyles}
-        initialCenter={{
-         lat: 39.958065,
-         lng: -82.997717
-        }}>
-          <Marker
-            onClick={this.onMarkerClick}
-            name={'Root Insurance'}
-            position={{lat: 39.958065, lng: -82.997717}}
+      <div>
+        <Grid>
+          <Cell col={10}>
+          <MapContainer
+            center={{ lat: 39.958065, lng: -82.997717 }}
+            zoom={14}
+            style={mapStyles}
+            data={data}
+            selectedItem={this.state.selectedItem}
           />
-          <InfoWindow
-            marker={this.state.activeMarker}
-            visible={this.state.showingInfoWindow}
-            onClose={this.onClose}
-          >
-            <div>
-              <h4>{this.state.selectedPlace.name}</h4>
-            </div>
-          </InfoWindow>
-
-          <Marker
-            onClick={this.onMarkerClick}
-            name={'SS1'}
-            position={{lat: 39.95, lng: -82.99}}
-          />
-          <InfoWindow
-            marker={this.state.activeMarker}
-            visible={this.state.showingInfoWindow}
-            onClose={this.onClose}
-          >
-            <div>
-              <h4>{this.state.selectedPlace.name}</h4>
-            </div>
-          </InfoWindow>
-
-      </Map>
+          </Cell>
+          <Cell col={2}>
+            <LocationList items={data} onClick={this.showInfo.bind(this)} />
+          </Cell>
+        </Grid>
+      </div>
     );
   }
 }
 
-export default GoogleApiWrapper({
-  apiKey: `${process.env.REACT_APP_GOOGLE_MAPS_KEY}`
-})(MapContainer);
+export default gMap;
