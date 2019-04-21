@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
 import MapContainer from "./Map";
 import { Grid, Cell } from 'react-mdl';
+//import Scrape from './Scrape';
+
+
+var url = 'https://sheriff.co.delaware.oh.us/sheriff-sales/';
+var request = require('request');
+var cheerio = require('cheerio');
+
+request('https://news.ycombinator.com', function (error, response, html) {
+  if (!error && response.statusCode == 200) {
+    console.log(html);
+  }
+});
 
 const mapStyles = {
   width: '100%',
@@ -20,14 +32,14 @@ const data = [
     lat : 39.959421,
     lng : -82.999859,
     addr : "132 S High St, Columbus, OH 43215",
-    id: 1
+    id: 2
   },
   {
     name : "Winans",
     lat : 39.957719,
     lng : -82.999499,
     addr : "216 S High St, Columbus, OH 43215",
-    id: 2
+    id: 3
   }
 ];
 
