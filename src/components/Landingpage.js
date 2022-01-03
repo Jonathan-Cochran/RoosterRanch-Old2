@@ -17,7 +17,7 @@ class Landing extends Component {
 							<h1>A PASSION FOR DEVELOPING</h1>
 							<hr/>
 							<p>
-								Technology | Teams | Ideas | 3d Prints
+								Products | Technology | Teams 
 							</p>
 							<div className="social-links">
 

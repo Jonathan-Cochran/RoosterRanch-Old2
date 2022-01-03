@@ -8,11 +8,7 @@ var url = 'https://sheriff.co.delaware.oh.us/sheriff-sales/';
 var request = require('request');
 var cheerio = require('cheerio');
 
-request('https://news.ycombinator.com', function (error, response, html) {
-  if (!error && response.statusCode == 200) {
-    console.log(html);
-  }
-});
+
 
 const mapStyles = {
   width: '100%',
@@ -21,13 +17,13 @@ const mapStyles = {
 
 const data = [
   {
-    name : "Root",
-    lat : 39.958065,
-    lng : -82.997717,
-    addr : "80 E Rich St Suite 500, Columbus, OH 43215",
+    name : "Cardinal Health Fuse",
+    lat : 40.09889382795459,
+    lng : -83.10525710729188,
+    addr : "4305 W Dublin Granville Rd, Dublin, OH 43017 ",
     id: 1
   },
-  {
+/*  {
     name : "Condado",
     lat : 39.959421,
     lng : -82.999859,
@@ -41,6 +37,7 @@ const data = [
     addr : "216 S High St, Columbus, OH 43215",
     id: 3
   }
+*/
 ];
 
 const LocationList = props => {
@@ -76,7 +73,7 @@ export class gMap extends Component {
           <Cell col={10}>
           <LocationList items={data} onClick={this.showInfo.bind(this)} />
           <MapContainer
-            center={{ lat: 39.958065, lng: -82.997717 }}
+            center={{ lat: 40.09889382795459, lng: -83.10525710729188 }}
             zoom={16}
             style={mapStyles}
             data={data}

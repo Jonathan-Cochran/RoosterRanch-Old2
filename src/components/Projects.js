@@ -14,32 +14,33 @@ class Project extends Component {
 		  <div className="projects-grid">
 			{/* React Web Profile Project  */}
 			<Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-			  <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://cdn-images-1.medium.com/max/1200/1*y6C4nSvy2Woe0m7bWEn4BA.png) center / cover'}} >Personal Portfolio Website</CardTitle>
+			  <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://www.nextafter.com/wp-content/uploads/2015/09/AB-Testing-Guide-for-Nonprofits.jpg) center / cover'}} >Test into sucess</CardTitle>
 			  <CardText>
-			  	This is my first attempt at a React Website. I decided to make something that I have always wanted to have and soemthing functional... A personal portfolio site.
+			  	Launched multivariant testing for a digital product to enable data-driven decisions on potential project value. 
+			  	Created feature release planning and owned delivery from milestones to the final product. 
+			  	Worked collaboratively with the business, IT, UX, and strategy teams. 
+			  	Launched multiple tests across the product including simple style / ux changes to more complex multi-product and user interaction tests. 
 			  </CardText>
 			  <CardActions border>
-			  	<a href="https://github.com/Jonathan-Cochran/RoosterRanch" rel="noopener noreferrer" target="_blank"><Button colored>GitHub</Button></a>
-			  	<a href="http://www.roosterran.ch" rel="noopener noreferrer" target="_blank"><Button colored>LiveDemo</Button></a>
+			  	<Link to="/TestAndLearn"><Button colored>Learn More</Button></Link>
 			  </CardActions>
 			  <CardMenu style={{color: '#fff'}}>
-			    <IconButton name="share" />
 			  </CardMenu>
 			</Card>
 
 			{/* React Web Profile Project  */}
 			<Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-			  <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://cdn-images-1.medium.com/max/1200/1*y6C4nSvy2Woe0m7bWEn4BA.png) center / cover'}} >Google Maps App</CardTitle>
+			  <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbsO3XAwYuRgJcU0tYoPsibzLpUmVCOPaARBxtXzh75TQoxDy0x0VlYuQM5OIHyaYNO-YCCqUh55ZR1nrhIyE03YKiujceQOg&usqp=CAU&ec=45732301) center / cover'}} >Mobile App Innovation</CardTitle>
 			  <CardText>
-			  	A react app integrated with Google Maps.
+			  	Performed a product manager role for a mobile application that had not historically had much focus from the business. 
+			  	Lead an effort to create a vision for what the app could achive and how it could benefit our customers. 
+			  	Developed roadmap and MVP (minimum viable product) steps along with the product team to enable incremental delivery.
+			  	Partnered with Executive Leadership, Marketing, UX, and my product team to prioritize and plan the ongoing feature implementations.
 			  </CardText>
 			  <CardActions border>
-			  	<Button colored>GitHub</Button>
-			  	<Button colored>CodePen</Button>
-			  	<Link to="/GMap"><Button colored>LiveDemo</Button></Link>
+			  	<Link to="/MobileInnovation"><Button colored>Learn More</Button></Link>
 			  </CardActions>
 			  <CardMenu style={{color: '#fff'}}>
-			    <IconButton name="share" />
 			  </CardMenu>
 			</Card>
 
@@ -52,14 +53,12 @@ class Project extends Component {
 			<Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
 			  <CardTitle style={{color: '#fff', height: '176px', background: 'url(http://www.buckeyesforacure.com/wp-content/gallery/misc/step1.jpg) center / cover'}} >Buckeyes For A Cure</CardTitle>
 			  <CardText>
-			  	This wordpress webiste was created to support the Buckeyes For A Cure non profit that I helped co-found. It allows users to purchase a buckeye to be part of the worlds largest buckeye necklace. Proceeds benefit the Stefanie Spielman fund for breast cancer research.
+			  	This wordpress webiste was created to support the Buckeyes For A Cure non profit that I helped co-found. It allows users to purchase a buckeye to be part of the worlds largest buckeye necklace. Proceeds benefit the Stefanie Spielman fund for breast cancer research. This project has ended and the site is no longer maintained.
 			  </CardText>
 			  <CardActions border>
-			  	<Button colored>GitHub</Button>
 			  	<a href="http://www.buckeyesforacure.com" rel="noopener noreferrer" target="_blank"><Button colored>LiveDemo</Button></a>
 			  </CardActions>
 			  <CardMenu style={{color: '#fff'}}>
-			    <IconButton name="share" />
 			  </CardMenu>
 			</Card>
 
@@ -70,18 +69,42 @@ class Project extends Component {
 			  	I created this wordpress website to help prmote the rentals that I have. I have also used it to experement with PHP and MySQL.
 			  </CardText>
 			  <CardActions border>
-			  	<Button colored>GitHub</Button>
 			  	<a href="http://www.haydencanhelp.com" rel="noopener noreferrer" target="_blank"><Button colored>LiveDemo</Button></a>
 			  </CardActions>
 			  <CardMenu style={{color: '#fff'}}>
-			    <IconButton name="share" />
 			  </CardMenu>
 			</Card>
 	  		</div>
 	  	)
 	  } else if(this.state.activeTab === 2) {
 	  	return(
-	  		<div><h1>This is MongoDB</h1></div>
+	  		<div className="projects-grid">			
+	  		<Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
+			  <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://cdn-images-1.medium.com/max/1200/1*y6C4nSvy2Woe0m7bWEn4BA.png) center / cover'}} >Personal Portfolio Website</CardTitle>
+			  <CardText>
+			  	This is my first attempt at a React Website. I decided to make something that I have always wanted to have and soemthing functional... A personal portfolio site.
+			  </CardText>
+			  <CardActions border>
+			  	<a href="https://github.com/Jonathan-Cochran/RoosterRanch" rel="noopener noreferrer" target="_blank"><Button colored>GitHub</Button></a>
+			  	<a href="http://www.roosterran.ch" rel="noopener noreferrer" target="_blank"><Button colored>LiveDemo</Button></a>
+			  </CardActions>
+			  <CardMenu style={{color: '#fff'}}>
+			  </CardMenu>
+			</Card>
+
+			{/* React Web Profile Project  */}
+			<Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
+			  <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://cdn-images-1.medium.com/max/1200/1*y6C4nSvy2Woe0m7bWEn4BA.png) center / cover'}} >Google Maps App</CardTitle>
+			  <CardText>
+			  	A react app integrated with Google Maps.
+			  </CardText>
+			  <CardActions border>
+			  	<Link to="/GMap"><Button colored>LiveDemo</Button></Link>
+			  </CardActions>
+			  <CardMenu style={{color: '#fff'}}>
+			  </CardMenu>
+			</Card>
+			</div>
 	  	)	  	
 	  } else if(this.state.activeTab === 3) {
 	  	return(
@@ -94,10 +117,9 @@ class Project extends Component {
 		return(
 			<div className="catagory-tabs">
 			  <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
-				<Tab>React</Tab>
+				<Tab>Product Management</Tab>
 				<Tab>WordPress</Tab>
-				<Tab>MongoDB</Tab>
-				<Tab>Angular</Tab>
+				<Tab>React</Tab>
 			  </Tabs>
 
 			  	<Grid>
