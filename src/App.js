@@ -4,6 +4,7 @@ import {Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
 import Main from './components/Main';
 import { Link } from 'react-router-dom';
 
+
 /*     Add these 2 lines back into the Header Navigation and Drawer Navigation to enable their links
                       <Link to="/resume">Resume</Link>
                       <Link to="/aboutme">About Me</Link>

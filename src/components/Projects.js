@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from 'react-mdl';
+import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardText, CardActions, Button, CardMenu } from 'react-mdl';
 import { Link } from 'react-router-dom';
 
 class Project extends Component {
@@ -102,6 +102,19 @@ class Project extends Component {
 			  	<Link to="/GMap"><Button colored>LiveDemo</Button></Link>
 			  </CardActions>
 			  <CardMenu style={{color: '#fff'}}>
+			  </CardMenu>
+			</Card>
+
+			{/* QRCode Project  */}
+			<Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
+			  <CardTitle style={{color: '#000', height: '176px', background: 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png) center / cover'}} ></CardTitle>
+			  <CardText>
+			  	A QR Code Scanning App.
+			  </CardText>
+			  <CardActions border>
+			  	<Link to="/QRCode"><Button colored>LiveDemo</Button></Link>
+			  </CardActions>
+			  <CardMenu style={{color: '#000'}}>
 			  </CardMenu>
 			</Card>
 			</div>

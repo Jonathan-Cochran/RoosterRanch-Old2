@@ -4,9 +4,9 @@ import { Grid, Cell } from 'react-mdl';
 //import Scrape from './Scrape';
 
 
-var url = 'https://sheriff.co.delaware.oh.us/sheriff-sales/';
-var request = require('request');
-var cheerio = require('cheerio');
+//var url = 'https://sheriff.co.delaware.oh.us/sheriff-sales/';
+//var request = require('request');
+//var cheerio = require('cheerio');
 
 
 
@@ -23,7 +23,7 @@ const data = [
     addr : "4305 W Dublin Granville Rd, Dublin, OH 43017 ",
     id: 1
   },
-/*  {
+  {
     name : "Condado",
     lat : 39.959421,
     lng : -82.999859,
@@ -37,7 +37,6 @@ const data = [
     addr : "216 S High St, Columbus, OH 43215",
     id: 3
   }
-*/
 ];
 
 const LocationList = props => {

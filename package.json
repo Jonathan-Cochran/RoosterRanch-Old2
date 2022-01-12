@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
-    "cheerio-react": "^1.0.2",
+    "aws-sdk": "^2.1054.0",
+    "cheerio": "^1.0.0-rc.10",
     "google-maps-react": "^2.0.6",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
@@ -12,8 +12,10 @@
     "react-meta-tags": "^1.0.1",
     "react-qr-reader": "^2.2.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "2.1.8",
-    "request": "^2.88.2"
+    "react-scripts": "5.0.0",
+    "request": "^2.88.2",
+    "store": "^2.0.12",
+    "util": "^0.12.4"
   },
   "scripts": {
     "start": "react-scripts start",
